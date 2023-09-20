@@ -1,0 +1,65 @@
+.task {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    padding: .5rem;
+    gap: .8rem;
+}
+
+.done,
+.notDone {
+    height: auto;
+    padding: .5rem;
+    font-size: 1.2rem;
+    overflow-wrap: break-word;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #b40c0c9f;
+}
+
+.done::after {
+    content: "";
+    margin-left: 1.2rem;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/check.png');
+    background-size: cover;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    height: 2rem;
+}
+
+@media screen and (min-width: 568px) {
+    .task {
+        width: 60vw;
+    }
+
+    .done,
+    .notDone {
+        font-size: 1.4rem;
+    }
+
+    .done::after {
+        width: 30px;
+        height: 30px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .task {
+        width: 40vw;
+    }
+}
